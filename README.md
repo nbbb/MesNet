@@ -25,5 +25,5 @@ Clone evaluation codes from [the official coco-evaluation repo](https://github.c
    ```
 
 # checkpoints
-MSRVTT https://pan.baidu.com/s/1oj0rVfdWN1tcTow-ua0WBA  code:q6ko
-MSVD  https://pan.baidu.com/s/1SMb7hZqPFr0kG36UkebdWw   code tq9j
+* MSRVTT https://pan.baidu.com/s/1oj0rVfdWN1tcTow-ua0WBA  code:q6ko
+* MSVD  https://pan.baidu.com/s/1SMb7hZqPFr0kG36UkebdWw   code tq9j
