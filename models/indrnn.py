@@ -83,26 +83,26 @@ class IndRNNCell(nn.Module):
         else:
             raise RuntimeError(
                 "Unknown nonlinearity: {}".format(self.nonlinearity))
-        self.weight_ih = Parameter(torch.Tensor(hidden_size, input_size))
-        self.weight_hh = Parameter(torch.Tensor(hidden_size))
-        if bias:
-            self.bias_ih = Parameter(torch.Tensor(hidden_size))
-        else:
-            self.register_parameter('bias_ih', None)
+#         self.weight_ih = Parameter(torch.Tensor(hidden_size, input_size))
+#         self.weight_hh = Parameter(torch.Tensor(hidden_size))
+#         if bias:
+#             self.bias_ih = Parameter(torch.Tensor(hidden_size))
+#         else:
+#             self.register_parameter('bias_ih', None)
 
-        if gradient_clip:
-            if isinstance(gradient_clip, tuple):
-                min_g, max_g = gradient_clip
-            else:
-                max_g = gradient_clip
-                min_g = -max_g
-            self.weight_ih.register_hook(
-                lambda x: x.clamp(min=min_g, max=max_g))
-            self.weight_hh.register_hook(
-                lambda x: x.clamp(min=min_g, max=max_g))
-            if bias:
-                self.bias_ih.register_hook(
-                    lambda x: x.clamp(min=min_g, max=max_g))
+#         if gradient_clip:
+#             if isinstance(gradient_clip, tuple):
+#                 min_g, max_g = gradient_clip
+#             else:
+#                 max_g = gradient_clip
+#                 min_g = -max_g
+#             self.weight_ih.register_hook(
+#                 lambda x: x.clamp(min=min_g, max=max_g))
+#             self.weight_hh.register_hook(
+#                 lambda x: x.clamp(min=min_g, max=max_g))
+#             if bias:
+#                 self.bias_ih.register_hook(
+#                     lambda x: x.clamp(min=min_g, max=max_g))
 
         # self.reset_parameters()
 
